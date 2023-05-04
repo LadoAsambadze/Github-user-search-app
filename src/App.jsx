@@ -37,6 +37,7 @@ function App() {
       );
       const info = response.data;
       setData(info);
+      setError(reset);
     } catch (error) {
       const noresult = "no result";
       setError(noresult);
@@ -123,7 +124,7 @@ function App() {
                 src={data.avatar_url}
                 className="w-[70px] h-[70px] rounded-full md:w-[117px] md:h-[117px]"
               />
-              <div className=" flex flex-col ml-5 xl:ml-9 xl:flex-row xl:justify-between">
+              <div className=" flex flex-col ml-5 xl:ml-7 xl:flex-row xl:justify-between w-full">
                 <div className="flex flex-col">
                   <span
                     className="text-base leading-6 text-[#2B3442] font-bold font-mono md:text-3xl md:leading-10"
@@ -137,7 +138,7 @@ function App() {
                 </div>
                 <span
                   className="font-normald text-[#697C9A] text-xs leading-5 font-mono
-                  md:text-base md:leading-6  xl:ml-36"
+                  md:text-base md:leading-6  xl:ml-12"
                   style={{ color: active ? "#697C9A" : "white" }}
                 >
                   Joined {formattedDate}
